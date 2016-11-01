@@ -323,10 +323,10 @@
                  <b><p style="text-align:center;"></b><p>Server status:</p>
                 <p style="text-align:center;">Server-IP here | 
 <?php 
-$status = file_get_contents('http://minecraft-api.com/api/query/statut.php?ip=Server-IP here&port=19132');
-$playeronline = file_get_contents('http://minecraft-api.com/api/query/playeronline.php?ip=Server-IP here&port=19132'); 
-$maxplayer = file_get_contents('http://minecraft-api.com/api/query/maxplayer.php?ip=Server-IP here&port=19132');
-$version = file_get_contents('http://minecraft-api.com/api/query/version.php?ip=Server-IP here&port=19132');
+$playeronline = file_get_contents('http://minecraft-api.com/api/query/playeronline.php?ip=play.kcmcpe.net&port=19132'); 
+$maxplayer = file_get_contents('http://minecraft-api.com/api/query/maxplayer.php?ip=play.kcmcpe.net&port=19132');
+$version = file_get_contents('http://minecraft-api.com/api/query/version.php?ip=play.kcmcpe.net&port=19132');
+$playerlist = file_get_contents('http://minecraft-api.com/api/query/playerlist.php?ip=play.kcmcpe.net&port=19132'); 
 
 echo $playeronline ." / ". $maxplayer ." | ". $version; ?></p>
 	     </div>
