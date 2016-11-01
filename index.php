@@ -318,24 +318,32 @@
 	<!-- Bottom section -->
 	<section class="bottom dark">
 		<div class="container">
-			<div class="bottom-content">
-				<span class="ip">mc.onepage.com</span>
-				<span class="server-name">Minecraft OnePage</span>
-			</div>
-		</div>
+	         <div class="bottom-content">
+                 <p><a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="btn btn-primary">Refresh</a></p>
+                 <b><p style="text-align:center;"></b><p>Server status:</p>
+                <p style="text-align:center;">Server-IP here | 
+<?php 
+$status = file_get_contents('http://minecraft-api.com/api/query/statut.php?ip=Server-IP here&port=19132');
+$playeronline = file_get_contents('http://minecraft-api.com/api/query/playeronline.php?ip=Server-IP here&port=19132'); 
+$maxplayer = file_get_contents('http://minecraft-api.com/api/query/maxplayer.php?ip=Server-IP here&port=19132');
+$version = file_get_contents('http://minecraft-api.com/api/query/version.php?ip=Server-IP here&port=19132');
+
+echo $playeronline ." / ". $maxplayer ." | ". $version; ?></p>
+	     </div>
+	  </div>
 	</section>
 
 	<!-- Footer -->
 	<footer class="dark">
 		<div class="container">
-			<span class="copyright">Design by <a href="http://ivizamedia.com">Iviza Media</a></span>
- 		    <ul>
+		<span class="copyright">Design by <a href="http://ivizamedia.com">Iviza Media</a></span>
+ 		<ul>
         	  	<li><a href="#top">Home</a></li>
             	<li><a href="#about">About</a></li>
             	<li><a href="#vote">Vote</a></li>
             	<li><a href="#shop">Shop</a></li>
             	<li><a href="#team">The team</a></li>
-            	<li><a href="#servers">Servers</a></li>
+                <li><a href="#servers">Servers</a></li>
           	</ul>
 		</div>
 	</footer>
